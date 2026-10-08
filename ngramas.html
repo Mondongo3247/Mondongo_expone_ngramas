@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N-gramas</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Botón fijo: te acompaña al bajar y regresa al index -->
+<a class="btn volver" href="index.html">⌂ Inicio</a>
+<button class="btn abrir" id="abrir">☰ Subtemas</button>
+<!-- Panel lateral con buscador (se llena solo desde app.js) -->
+<aside id="panel"><h3>Buscar subtema</h3><input id="buscar" type="search" placeholder="Escribe para buscar..."><div id="lista"></div></aside>
+
+<div class="contenedor">
+<h1>N-GRAMAS</h1>
+
+<!--
+  CADA SUBTEMA es un <section>. Para cambiar una imagen, reemplaza
+  <div class="img">...</div> por <img class="img" src="mi-imagen.png" alt="descripción">
+-->
+<main>
+<section><div><h2>¿Qué es un n-grama?</h2><p>Un n-grama es un grupo de <b>n</b> elementos seguidos dentro de un texto. Los elementos normalmente son palabras (a veces letras). Es como cortar una frase en "pedacitos" de tamaño fijo.</p></div><div ><img src="imagenes/agnespc.jpg"/div></section>
+
+<section><div><h2>Origen y concepto de los n-gramas</h2><p>La idea viene de la estadística y la teoría de la información del siglo XX: Claude Shannon estudió qué tan predecible es la siguiente letra o palabra. La "n" es solo el número de elementos que agrupamos.</p></div><div><img src= "imagenes/bebelloraamongus.jpg"/div></section>
+
+<section><div><h2>¿Cómo funcionan los n-gramas?</h2><p>Primero se tokeniza el texto; luego se desliza una "ventana" de tamaño n, de token en token, y se cuenta cuántas veces aparece cada grupo. Esos conteos muestran qué combinaciones son comunes.</p></div><div ><img src= "imagenes/weyconlapquebrilla.jpg"/div></section>
+
+<section><div><h2>Unigramas</h2><p>Son n-gramas de 1 elemento: palabras sueltas. En "me gusta Python" hay tres unigramas: "me", "gusta" y "Python". Sirven para contar la frecuencia de cada palabra.</p></div><div ><img src= "imagenes/garrafonconflow.jpg"/div></section>
+
+<section><div><h2>Bigramas</h2><p>Grupos de 2 palabras consecutivas. En "me gusta Python": "me gusta" y "gusta Python". Capturan un poco de contexto: lo que viene después de cada palabra.</p></div><div><img src= "imagenes/zetadelpvznuclear.jpg"/div></section>
+
+<section><div><h2>Trigramas</h2><p>Grupos de 3 palabras seguidas. Dan más contexto que los bigramas, pero hay menos repeticiones, porque combinaciones largas se repiten menos en un texto.</p></div><div ><img src= "imagenes/sonrisasperro.jpg"/div></section>
+
+<section><div><h2>N-gramas de cuatro o más elementos</h2><p>Se llaman 4-gramas, 5-gramas, etc. Reconocen frases largas y muy específicas, pero necesitan muchísimo texto para encontrar repeticiones útiles.</p></div><div ><img src= "imagenes/weyobesopcsouthpark.jpg"/div></section>
+
+<section><div><h2>Ejemplos de n-gramas en el lenguaje cotidiano</h2><p>"buenos días" y "por favor" son bigramas muy frecuentes; "muchas gracias por todo" es un 4-grama. Las usamos tanto que casi las decimos como una sola unidad.</p></div><div><img src= "imagenes/pala.jpg"/div></section>
+
+<section><div><h2>N-gramas en diferentes idiomas</h2><p>Funcionan en cualquier idioma porque solo cuentan secuencias. Pero cada lengua tiene sus propios patrones: en inglés "of the" es muy común y en español lo es "de la".</p></div><div ><img src= "imagenes/smilingpc.jpg"/div></section>
+
+<section><div><h2>N-gramas y frecuencia de palabras</h2><p>Contar cuántas veces aparece cada n-grama muestra los patrones más usados. Con pandas se puede guardar el conteo en una tabla y ordenarla de mayor a menor.</p></div><div ><img src= "imagenes/pvpconmihijo.jpg"/div></section>
+
+
+<section><div><h2>N-gramas y predicción de texto</h2><p>Si después de "buenos" casi siempre aparece "días", el sistema sugiere "días". Predecir la siguiente palabra es elegir la que más veces siguió a las anteriores.</p></div><div><img src= "imagenes/davo.jpg"/div></section>
+
+<section><div><h2>N-gramas en los teclados de celulares</h2><p>Las sugerencias sobre tu teclado usan modelos de n-gramas (hoy combinados con otras técnicas) y se adaptan a cómo escribes tú.</p></div><div ><img src= "imagenes/wasap.jpg"/div></section>
+
+<section><div><h2>N-gramas en buscadores de Internet</h2><p>Los buscadores autocompletan tu búsqueda con las frases más frecuentes que empiezan igual. También los usan para entender si dos consultas significan algo parecido.</p></div><div ><img src= "imagenes/tenisruedas.jpg"/div></section>
+
+<section><div><h2>N-gramas en inteligencia artificial</h2><p>Fueron la base de los primeros modelos de lenguaje. Los modelos actuales son más complejos, pero siguen la misma idea: predecir qué viene según lo que ya apareció.</p></div><div ><img src= "imagenes/barbanegrafactos.jpg"/div></section>
+
+
+<section><div><h2>N-gramas en el procesamiento del lenguaje natural (PLN)</h2><p>En PLN se usan para clasificar textos, detectar el idioma, corregir ortografía y analizar opiniones. Son una herramienta simple y rápida para empezar.</p></div><div ><img src= "imagenes/aprendiapensar.jpg"/div></section>
+
+
+<section><div><h2>Ventajas de utilizar n-gramas</h2><ul class="simple"><li>Fáciles de entender y programar.</li><li>Rápidos y no necesitan equipo potente.</li><li>Funcionan en cualquier idioma.</li></ul></div><div ><img src= "imagenes/bajaaca.jpg"/div></section>
+
+<section><div><h2>Limitaciones de los n-gramas</h2><ul class="simple"><li>Solo ven un contexto corto (las últimas n-1 palabras).</li><li>No entienden el significado.</li><li>Con n grande hay demasiadas combinaciones y pocas repeticiones.</li></ul></div><div><img src="imagenes/elpisoestudiar.jpg">/div></section>
+
+<!-- EJEMPLO EN PYTHON: puedes cambiar la frase de la lista "palabras" -->
+<section><div><h2>Ejemplo práctico de análisis con n-gramas</h2><p>Sacamos los bigramas de una frase y contamos cuántas veces aparece cada uno:</p>
+<pre>
+from collections import Counter
+import pandas as pd
+
+palabras = "el gato come y el gato duerme".split()  # tokenización simple
+n = 2                                               # tamaño del n-grama
+
+# Ventana deslizante: toma n palabras desde cada posición
+ngramas = [" ".join(palabras[i:i+n]) for i in range(len(palabras)-n+1)]
+
+conteo = Counter(ngramas)                           # cuenta repeticiones
+tabla = pd.DataFrame(conteo.items(), columns=["ngrama", "frecuencia"])
+print(tabla.sort_values("frecuencia", ascending=False))
+</pre><p>Resultado: "el gato" aparece 2 veces; los demás, 1.</p></div><div  ><img src= "imagenes/homerohuyedelapala.jpg"/div></section>
+
+<section><div><h2>Diferencia entre palabra, frase y n-grama</h2><p>Una <b>palabra</b> es una unidad con significado. Una <b>frase</b> es una unidad con sentido gramatical. Un <b>n-grama</b> es solo un corte de n elementos seguidos, tenga sentido o no ("gato come y" es un trigrama válido).</p></div><div  ><img src= "imagenes/nutrientefrijol.jpg"/div></section>
+
+<section><div><h2>Aplicaciones de los n-gramas en la actualidad</h2><p>Autocorrección y sugerencias del teclado, autocompletado de buscadores, detección de plagio, identificación del idioma, reconocimiento de voz y análisis de opiniones en redes sociales.</p></div><div ><img src= "imagenes/miradas.jpg"/div></section>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

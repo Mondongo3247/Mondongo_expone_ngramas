@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palabras clave y colocaciones</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Botón fijo: te acompaña al bajar y regresa al index -->
+<a class="btn volver" href="index.html">⌂ Inicio</a>
+<button class="btn abrir" id="abrir">☰ Subtemas</button>
+<!-- Panel lateral con buscador (se llena solo desde app.js) -->
+<aside id="panel"><h3>Buscar subtema</h3><input id="buscar" type="search" placeholder="Escribe para buscar..."><div id="lista"></div></aside>
+
+<div class="contenedor">
+<h1>PALABRAS CLAVE Y COLOCACIONES</h1>
+
+<!--
+  CADA SUBTEMA es un <section>. Los títulos de grupo son <div class="grupo">.
+  Para poner una imagen, reemplaza <div class="img">Imagen</div> por <img class="img" src="mi-imagen.png" alt="descripción">
+-->
+<main>
+
+<div class="grupo">Palabras clave</div>
+
+<section><div><h2>¿Qué son las palabras clave?</h2><p>Son las palabras que mejor representan de qué trata un texto. Si las lees solas, ya te dan una idea del tema.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Características de una palabra clave</h2><p>Suele ser relevante para el tema, aparece con cierta frecuencia y no es una palabra de relleno como "el", "de" o "que".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave y significado</h2><p>Las palabras clave cargan el significado principal. En "El perro ladra en el parque", "perro", "ladra" y "parque" dicen casi todo.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en un texto</h2><p>Se ubican en títulos, primeras líneas y ideas que se repiten. Al encontrarlas, puedes saber el tema sin leer todo.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave principales y secundarias</h2><p>Las <b>principales</b> definen el tema central (ej. "clima"). Las <b>secundarias</b> lo detallan (ej. "lluvia", "temperatura").</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Cómo identificar palabras clave</h2><p>Tokeniza el texto, quita las palabras vacías (stopwords), cuenta las que quedan y revisa las más repetidas. Después comprueba que tengan sentido para el tema.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave y frecuencia</h2><p>Una palabra muy frecuente suele ser importante, pero no siempre: "de" es la más frecuente y no dice nada. Por eso se filtran las palabras vacías antes de contar.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en textos escolares</h2><p>Sirven para subrayar, hacer resúmenes y mapas conceptuales. Ayudan a estudiar porque reducen un tema largo a unos cuantos conceptos.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en páginas web</h2><p>Cada página usa palabras clave en su título y contenido para dejar claro de qué trata y ser encontrada más fácilmente.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en los buscadores</h2><p>Cuando buscas "tacos cerca de mí", esas palabras son tus palabras clave. El buscador las compara con las páginas que tiene registradas.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave y motores de búsqueda</h2><p>Un motor de búsqueda guarda un índice de las palabras de cada página. Al buscar, usa ese índice para ordenar resultados por relevancia.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en SEO</h2><p>SEO significa optimizar una página para aparecer mejor en buscadores. Consiste en elegir las palabras que la gente busca y usarlas de forma natural en el contenido.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en redes sociales</h2><p>Los hashtags funcionan como palabras clave: agrupan publicaciones del mismo tema y ayudan a que otros las encuentren.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en publicidad digital</h2><p>Los anunciantes eligen palabras clave para que su anuncio aparezca cuando alguien busca algo relacionado con su producto.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave en inteligencia artificial</h2><p>Los sistemas de IA las extraen para clasificar documentos, etiquetar temas y encontrar información rápido en grandes cantidades de texto.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras clave para resumir información</h2><p>Una lista de palabras clave es un resumen mínimo. Sirve de base para redactar un resumen más completo o un esquema.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Diferencia entre palabra clave y palabra común</h2><p>Una palabra común (artículos, preposiciones) aparece en todos los textos y casi no informa. Una palabra clave es específica del tema y sí lo distingue.</p></div><div class="img">Imagen</div></section>
+
+<!-- EJEMPLO EN PYTHON: puedes cambiar el texto y la lista de stopwords -->
+<section><div><h2>Ejemplos de palabras clave</h2><p>Texto: "El volcán entró en erupción y la ceniza cubrió el pueblo". Palabras clave: <b>volcán, erupción, ceniza, pueblo</b>. Con Python:</p>
+<pre>
+texto = "el volcán entró en erupción y la ceniza cubrió el pueblo"
+vacias = ["el", "en", "y", "la"]          # palabras comunes a ignorar
+claves = [p for p in texto.split() if p not in vacias]
+print(claves)
+</pre></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Importancia de las palabras clave</h2><p>Ahorran tiempo, facilitan encontrar información, ayudan a estudiar y permiten que las computadoras organicen grandes cantidades de texto.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Errores comunes al elegir palabras clave</h2><ul class="simple"><li>Elegir palabras demasiado generales ("cosas", "tema").</li><li>Incluir palabras vacías.</li><li>Repetir la misma palabra de forma exagerada.</li><li>Olvidar sinónimos o formas de la palabra (singular/plural).</li></ul></div><div class="img">Imagen</div></section>
+
+<div class="grupo">Colocaciones lingüísticas</div>
+
+<section><div><h2>¿Qué son las colocaciones lingüísticas?</h2><p>Son combinaciones de palabras que suelen aparecer juntas de forma natural. Decimos "hacer la tarea", no "fabricar la tarea".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Origen del concepto de colocación</h2><p>El término lo popularizó el lingüista británico J. R. Firth con la idea de que una palabra se conoce "por la compañía que mantiene".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Características de las colocaciones</h2><p>Son frecuentes, bastante fijas y no se eligen por lógica sino por costumbre del idioma. Cambiar una palabra suena raro aunque se entienda.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>¿Cómo se forman las colocaciones?</h2><p>Se forman con el uso: los hablantes repiten ciertas combinaciones hasta que se vuelven la forma normal de decir algo.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Palabras que suelen aparecer juntas</h2><p>"Café fuerte", "tomar una decisión", "lluvia intensa". Si ves un par que se repite mucho en un corpus, probablemente es una colocación.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones y contexto</h2><p>El contexto decide qué colocación usar: "cargar" va con "batería" en tecnología, pero con "peso" en otras situaciones.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones en el lenguaje cotidiano</h2><p>"Dar las gracias", "tener hambre", "pasar el rato", "hacer una pregunta". Las usamos sin pensar.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones en español</h2><p>En español decimos "tener sueño", "echar una mano" y "prestar atención". Las combinaciones son propias del idioma.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones en inglés</h2><p>En inglés se dice "make a decision", "take a shower", "heavy rain". Cada verbo se asocia a ciertos sustantivos.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Diferencias entre español e inglés</h2><p>Lo que en español es "tomar una decisión", en inglés es "make a decision" (hacer). Traducir palabra por palabra produce errores.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Tipos de colocaciones</h2><p>Se clasifican por las categorías gramaticales que se combinan. Los siguientes subtemas muestran los más comunes.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Verbo + sustantivo</h2><p>Ejemplos: "hacer ejercicio", "dar un paseo", "cometer un error".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Sustantivo + adjetivo</h2><p>Ejemplos: "viento fuerte", "fiebre alta", "amigo íntimo".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Sustantivo + sustantivo</h2><p>Ejemplos: "hora pico", "año luz", "bolsa de valores".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Verbo + adverbio</h2><p>Ejemplos: "llover torrencialmente", "dormir profundamente", "trabajar duro".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Adjetivo + sustantivo</h2><p>Ejemplos: "profundo agradecimiento", "feroz competencia", "dulce sueño".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones y expresiones frecuentes</h2><p>Muchas expresiones que oímos todos los días son colocaciones: "buen provecho", "de todos modos", "tener en cuenta".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones frente a frases libres</h2><p>En una frase libre puedes cambiar cualquier palabra ("comer una manzana / una pera"). En una colocación, solo ciertas palabras combinan bien.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones frente a modismos</h2><p>En una colocación el significado se entiende por sus palabras ("hacer la cama"). En un modismo no ("costar un ojo de la cara").</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Importancia de las colocaciones para aprender idiomas</h2><p>Aprender combinaciones, y no palabras sueltas, hace que hables de forma más natural y fluida.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones y traducción</h2><p>Un buen traductor busca la colocación equivalente en el otro idioma, no la traducción literal. Los traductores automáticos aprenden esto con datos.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones incorrectas y errores de aprendizaje</h2><p>Decir "hacer una foto" (en lugar de "tomar una foto") o "make a photo" son errores típicos causados por traducir literalmente.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones en textos académicos</h2><p>Los textos académicos usan combinaciones formales: "llevar a cabo un estudio", "arrojar resultados", "plantear una hipótesis".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones en redes sociales</h2><p>Surgen combinaciones nuevas muy usadas: "dar like", "subir un video", "hacerse viral", "seguir a alguien".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Colocaciones en inteligencia artificial y PLN</h2><p>Se detectan con estadísticas: si dos palabras aparecen juntas más de lo esperado por azar (por ejemplo, con la métrica PMI), probablemente forman una colocación. Los bigramas son el punto de partida.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Ejemplos de colocaciones comunes</h2><p>"Tomar una decisión", "hacer un favor", "correr un riesgo", "lluvia ligera", "dar un consejo", "pedir ayuda".</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Cómo identificar una colocación</h2><p>Pregúntate si podrías cambiar una palabra por un sinónimo sin que suene raro. Si no puedes, probablemente es una colocación. También puedes buscar bigramas frecuentes en un corpus.</p></div><div class="img">Imagen</div></section>
+
+<section><div><h2>Importancia de las colocaciones en la comunicación</h2><p>Hacen que el mensaje suene natural y se entienda rápido. Usarlas bien muestra dominio del idioma.</p></div><div class="img">Imagen</div></section>
+
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

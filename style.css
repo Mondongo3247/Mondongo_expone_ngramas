@@ -1,0 +1,54 @@
+/* ===== PALETA (cambia aquí los colores de todo el sitio) ===== */
+:root{--morado:#8427F5;--negro:#000000;--menta:#A8E6A8;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--negro);color:var(--menta);font-family:'Rajdhani','Segoe UI',sans-serif;font-size:19px;line-height:1.6;
+/* Fondo de cuadrícula futurista */
+background-image:linear-gradient(rgba(132,39,245,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(132,39,245,.15) 1px,transparent 1px);background-size:40px 40px}
+h1,h2,h3,.btn{font-family:'Orbitron','Segoe UI',sans-serif;letter-spacing:1px}
+h1{font-size:2.4rem;text-shadow:0 0 15px var(--morado)}
+a{color:var(--menta)}
+.contenedor{max-width:1000px;margin:auto;padding:2rem 1.2rem 6rem}
+
+/* ===== Botones y tarjetas con esquinas cortadas ===== */
+.btn{display:inline-block;background:var(--negro);color:var(--menta);border:2px solid var(--morado);padding:.6rem 1.2rem;text-decoration:none;cursor:pointer;font-size:.9rem;
+box-shadow:0 0 12px var(--morado);clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);transition:.2s}
+.btn:hover{background:var(--morado);color:var(--negro)}
+.card{border:2px solid var(--morado);background:rgba(0,0,0,.85);padding:1.5rem;box-shadow:0 0 18px rgba(132,39,245,.6);
+clip-path:polygon(18px 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%,0 18px)}
+
+/* ===== Página principal ===== */
+.hero{text-align:center;padding:3rem 0 1rem}
+.hero p{max-width:760px;margin:1rem auto}
+.intro{display:grid;gap:1rem;margin:2rem 0}
+.intro h3{color:var(--morado);text-shadow:0 0 8px var(--morado);margin-bottom:.4rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0}
+.cards h2{margin-bottom:.8rem}
+.cards p{margin-bottom:1.2rem}
+/* Pie de página con datos de contacto */
+footer{border-top:3px solid var(--morado);box-shadow:0 -4px 20px var(--morado);background:var(--negro);padding:1.5rem 1rem;text-align:center}
+footer .datos{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;margin-top:.6rem}
+
+/* ===== Páginas de cards ===== */
+.grupo{font-family:'Orbitron',sans-serif;font-size:1.5rem;color:var(--morado);border-bottom:2px solid var(--morado);margin:3rem 0 1rem;text-shadow:0 0 10px var(--morado)}
+section{display:grid;grid-template-columns:1fr 240px;gap:1.2rem;align-items:start;border-left:3px solid var(--morado);padding:1rem 1.2rem;margin-bottom:1.2rem;background:rgba(132,39,245,.07);scroll-margin-top:80px}
+section h2{font-size:1.25rem;margin-bottom:.4rem;text-shadow:0 0 8px var(--morado)}
+/* Espacio para tus imágenes: sustituye el <div class="img"> por <img src="tu-imagen.png"> */
+.img{min-height:150px;border:2px dashed var(--morado);display:flex;align-items:center;justify-content:center;text-align:center;font-size:.85rem;opacity:.7;padding:.5rem}
+.img img,img.img{width:100%;height:auto;display:block}
+pre{background:#000;border:1px solid var(--morado);padding:.7rem;overflow-x:auto;font-size:.9rem;margin-top:.5rem}
+ul.simple{margin-left:1.2rem}
+
+/* Botón fijo arriba a la derecha: te acompaña mientras lees */
+.volver{position:fixed;top:14px;right:14px;z-index:50}
+/* Botón y panel lateral izquierdo (buscador de subtemas) */
+.abrir{position:fixed;top:14px;left:14px;z-index:50}
+#panel{position:fixed;top:0;left:0;height:100%;width:320px;max-width:85%;background:var(--negro);border-right:3px solid var(--morado);box-shadow:0 0 25px var(--morado);z-index:60;padding:1rem;transform:translateX(-105%);transition:.3s;display:flex;flex-direction:column}
+#panel.abierto{transform:none}
+#panel input{width:100%;padding:.6rem;background:#000;border:2px solid var(--morado);color:var(--menta);font-size:1rem;margin:.6rem 0;font-family:inherit}
+#lista{overflow-y:auto;flex:1}
+#lista a{display:block;padding:.3rem .2rem;text-decoration:none;font-size:.95rem;border-bottom:1px solid rgba(132,39,245,.3)}
+#lista a:hover{background:var(--morado);color:var(--negro)}
+#lista .g{color:var(--morado);font-family:'Orbitron',sans-serif;font-size:.8rem;margin-top:.8rem}
+
+@media(max-width:700px){section{grid-template-columns:1fr}body{font-size:18px}h1{font-size:1.8rem}}
